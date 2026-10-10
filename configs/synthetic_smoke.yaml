@@ -1,0 +1,29 @@
+seed: 7
+data:
+  manifest: data/synthetic/manifest.csv
+  num_classes: 4
+  imu_channels: 6
+  normalization: window_zscore
+  use_audio: false
+model:
+  variant: rcbd
+  hidden_dim: 24
+  encoder_blocks: 1
+  dropout: 0.1
+  temporal: tcn
+  role_vector: true
+training:
+  epochs: 1
+  batch_size: 16
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 2
+  num_workers: 0
+  class_weighting: true
+  swap_augmentation_probability: 0.0
+loss:
+  swap_consistency: 0.1
+  role_smoothness: 0.01
+  role_utilization: 0.01
+  minimum_role_utilization: 0.05
+

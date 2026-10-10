@@ -1,0 +1,66 @@
+seed: 3407
+data:
+  manifest: /root/autodl-tmp/realdisp_project/data/realdisp_distal_33/manifest_ideal.csv
+  limb_mode: four
+  num_classes: 33
+  imu_channels: 3
+  sample_rate: 50
+  normalization: train_rms_shared
+  missing_strategy: interpolate
+  use_audio: false
+model:
+  variant: rcbd
+  hidden_dim: 128
+  encoder_blocks: 3
+  dropout: 0.2
+  temporal: tcn
+  role_vector: true
+  orientation_enabled: false
+  orientation_temperature: 1.0
+  orientation_mode: group_equivariant
+  scales_seconds: [1, 2, 4]
+  bidirectional_scales: true
+  tokens_per_scale: 64
+training:
+  epochs: 50
+  batch_size: 64
+  gradient_accumulation_steps: 1
+  learning_rate: 0.0003
+  warmup_epochs: 3
+  weight_decay: 0.0001
+  patience: 10
+  num_workers: 8
+  class_weighting: true
+  swap_augmentation_probability: 0.0
+  orientation_augmentation_probability: 0.0
+  quality_augmentation_probability: 0.5
+  quality_augmentation_max_degrees: 90.0
+  quality_augmentation_classification_mix: 0.5
+  quality_augmentation_profile_sampling: limb_shuffle
+  max_nonfinite_batches: 3
+loss:
+  swap_consistency: 0.0
+  role_smoothness: 0.01
+  role_utilization: 0.01
+  minimum_role_utilization: 0.05
+  quality_supervision: 0.0
+  perturbation_prediction_consistency: 0.1
+  factor_common_consistency: 0.0
+  factor_canonical_consistency: 0.0
+  factor_consistency_stop_gradient: true
+  orientation_entropy: 0.0
+  orientation_information: 0.0
+  orientation_equivariance: 0.0
+  orientation_canonical_consistency: 0.0
+  orientation_prediction_consistency: 0.0
+  orientation_embedding_consistency: 0.0
+evaluation:
+  enabled: true
+  stride_seconds: 0.5
+  radius_seconds: 2.0
+  sigma_seconds: 1.0
+cross_validation:
+  n_splits: 3
+  seeds: [3407]
+  val_participants_per_fold: 2
+  refit_full_train: true

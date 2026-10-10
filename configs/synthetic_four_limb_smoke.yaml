@@ -1,0 +1,52 @@
+seed: 11
+data:
+  manifest: data/synthetic_four/manifest.csv
+  limb_mode: four
+  num_classes: 4
+  imu_channels: 3
+  sample_rate: 8
+  normalization: scale_only
+  normalization_scale: 1.0
+  missing_strategy: error
+  use_audio: false
+model:
+  variant: rcbd
+  hidden_dim: 16
+  encoder_blocks: 1
+  dropout: 0.0
+  temporal: tcn
+  role_vector: true
+  orientation_enabled: true
+  orientation_temperature: 1.0
+  orientation_mode: group_equivariant
+  scales_seconds: [1, 2, 4]
+  bidirectional_scales: true
+  tokens_per_scale: 8
+training:
+  epochs: 1
+  batch_size: 8
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 2
+  num_workers: 0
+  class_weighting: true
+  swap_augmentation_probability: 0.0
+  orientation_augmentation_probability: 0.5
+loss:
+  swap_consistency: 0.0
+  role_smoothness: 0.01
+  role_utilization: 0.01
+  minimum_role_utilization: 0.05
+  orientation_entropy: 0.0
+  orientation_information: 0.01
+  orientation_equivariance: 0.01
+  orientation_canonical_consistency: 0.1
+  orientation_prediction_consistency: 0.1
+  orientation_embedding_consistency: 0.05
+evaluation:
+  enabled: false
+cross_validation:
+  n_splits: 3
+  seeds: [11]
+  val_participants_per_fold: 1
+  refit_full_train: true

@@ -1,0 +1,58 @@
+{
+  "name": "WEAR four-sensor participant-disjoint FMC-PC validation (angle-only EXP-1)",
+  "config_sha256": "2f7c95e5bed8d3ff4553dd49a07ca0c83a6c7e148aea46236eeeb0205aed1985",
+  "folds_sha256": "adf1243ab5353b8cff6d81bba8e0bcfe3671a9729035ef987a59c912388ee611",
+  "profile_sha256": "b05eedb46aa01cff0c2331b09bc3ca4911821a0ef7c8291c0807dd19c555b2b7",
+  "test_folds": [
+    [
+      "sbj_0",
+      "sbj_12",
+      "sbj_14",
+      "sbj_15",
+      "sbj_3",
+      "sbj_5"
+    ],
+    [
+      "sbj_1",
+      "sbj_10",
+      "sbj_11",
+      "sbj_16",
+      "sbj_4",
+      "sbj_6"
+    ],
+    [
+      "sbj_13",
+      "sbj_17",
+      "sbj_2",
+      "sbj_7",
+      "sbj_8",
+      "sbj_9"
+    ]
+  ],
+  "external_participants_accessed": false,
+  "input": "four 3-axis accelerometers at 50 Hz",
+  "classes": 19,
+  "primary_metric": "sample-wise macro-F1 with common smoothing",
+  "secondary_metric": "unsmoothed center-window macro-F1",
+  "augmentation_probability": 0.5,
+  "prediction_consistency_weight": 0.1,
+  "fmc_components": {
+    "rotation": true,
+    "gain": false,
+    "noise": false
+  },
+  "correction_note": "FMC conditions apply the empirical rotation amplitude only; the archived 2026-08 runs additionally applied empirical gain and noise.",
+  "seeds": [
+    256,
+    3407,
+    114514
+  ],
+  "methods": [
+    "clean",
+    "lr_swap",
+    "uniform180",
+    "uniform180_pc",
+    "fmc_no_pc",
+    "fmc_pc"
+  ]
+}

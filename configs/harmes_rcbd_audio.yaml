@@ -1,0 +1,30 @@
+seed: 42
+data:
+  manifest: data/harmes/manifest.csv
+  num_classes: 16
+  imu_channels: 6
+  normalization: window_zscore
+  use_audio: true
+model:
+  variant: rcbd
+  hidden_dim: 128
+  encoder_blocks: 3
+  dropout: 0.2
+  temporal: gru
+  role_vector: true
+  audio_embedding_dim: 128
+training:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 10
+  num_workers: 0
+  class_weighting: true
+  swap_augmentation_probability: 0.0
+loss:
+  swap_consistency: 0.1
+  role_smoothness: 0.01
+  role_utilization: 0.01
+  minimum_role_utilization: 0.05
+

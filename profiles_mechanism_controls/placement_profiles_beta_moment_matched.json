@@ -1,0 +1,1206 @@
+{
+  "protocol": {
+    "name": "REALDISP unlabeled training-participant placement calibration",
+    "labels_read": false,
+    "participants": [
+      "subject1",
+      "subject2",
+      "subject3",
+      "subject4",
+      "subject5",
+      "subject6",
+      "subject7",
+      "subject8",
+      "subject9",
+      "subject10"
+    ],
+    "ideal_manifest": "/root/autodl-tmp/realdisp_project/data/realdisp_distal_33/manifest_ideal.csv",
+    "self_manifest": "/root/autodl-tmp/realdisp_project/data/realdisp_distal_33/manifest_self.csv",
+    "target_validation_participants_read": false,
+    "identifiable_rotation": "minimum-angle gravity-direction tilt; yaw unobserved",
+    "variant": "beta_moment_matched_amplitude",
+    "variant_method": "per_limb_beta_moment_quantiles",
+    "variant_seed": 20260920,
+    "variant_rng": "scipy.stats.beta.ppf stratified quantiles, independent per limb",
+    "support_max_degrees": 175.02285456373536,
+    "target_mean_degrees": 40.840709931325534,
+    "target_sd_sample_degrees": 46.12397510720347,
+    "realized_mean_degrees": 40.870622095758854,
+    "realized_sd_sample_degrees": 45.866009450790635,
+    "per_limb": {
+      "left_wrist": {
+        "records": 9,
+        "support_max_degrees": 99.78825526990238,
+        "target_mean_degrees": 36.28354068019639,
+        "target_sd_population_degrees": 29.930977231740407,
+        "variance_clamped_to_support": false,
+        "degenerate": false,
+        "quantiles_floored": 0,
+        "min_angle_floor_degrees": 0.5,
+        "alpha": 0.5715937496640005,
+        "beta": 1.0004232567491462,
+        "realized_mean_degrees": 36.19526327131982,
+        "realized_sd_population_degrees": 29.73781348857803,
+        "realized_max_degrees": 90.28182467912868
+      },
+      "right_wrist": {
+        "records": 9,
+        "support_max_degrees": 97.10069999251574,
+        "target_mean_degrees": 48.40019431283179,
+        "target_sd_population_degrees": 27.698063297537388,
+        "variance_clamped_to_support": false,
+        "degenerate": false,
+        "quantiles_floored": 0,
+        "min_angle_floor_degrees": 0.5,
+        "alpha": 1.0330094084591386,
+        "beta": 1.0394189791608672,
+        "realized_mean_degrees": 48.39874552621309,
+        "realized_sd_population_degrees": 27.50745754906702,
+        "realized_max_degrees": 91.26525785534898
+      },
+      "left_ankle": {
+        "records": 9,
+        "support_max_degrees": 175.02285456373536,
+        "target_mean_degrees": 47.539728863902596,
+        "target_sd_population_degrees": 65.98099483919002,
+        "variance_clamped_to_support": false,
+        "degenerate": false,
+        "quantiles_floored": 4,
+        "min_angle_floor_degrees": 0.5,
+        "alpha": 0.10650333881397628,
+        "beta": 0.2856006724048327,
+        "realized_mean_degrees": 47.75942299714877,
+        "realized_sd_population_degrees": 65.83319833930565,
+        "realized_max_degrees": 174.43494766879056
+      },
+      "right_ankle": {
+        "records": 9,
+        "support_max_degrees": 157.3283920548289,
+        "target_mean_degrees": 31.139375868371328,
+        "target_sd_population_degrees": 45.16481016660926,
+        "variance_clamped_to_support": false,
+        "degenerate": false,
+        "quantiles_floored": 3,
+        "min_angle_floor_degrees": 0.5,
+        "alpha": 0.18334511496033462,
+        "beta": 0.7429866217369266,
+        "realized_mean_degrees": 31.129056588353755,
+        "realized_sd_population_degrees": 44.554761727518496,
+        "realized_max_degrees": 135.2633070710256
+      }
+    },
+    "note": "Amplitude-only control with INDEPENDENT per-limb scaled-Beta moment matching: each limb support, mean and SD are matched from that limb own empirical records and a stratified quantile grid is drawn within the limb, so every limb (wrists included) retains its own tail coverage. Record axes, gain and noise are unchanged. A 0.5 degree strictly-increasing floor guards rotation-axis numerical stability."
+  },
+  "limbs": {
+    "left_wrist": [
+      {
+        "rotation": [
+          [
+            0.9999390670396492,
+            0.01078142000127634,
+            -0.002371326766221682
+          ],
+          [
+            -0.010779091337715777,
+            0.9999414112443273,
+            0.000992606989864091
+          ],
+          [
+            0.0023818895459910773,
+            -0.0009669857595770736,
+            0.9999966957649068
+          ]
+        ],
+        "angle_degrees": 0.634994440474536,
+        "gain": 1.0276141768462925,
+        "raw_gain": 1.0276141768462925,
+        "noise_std": 0.016377696624947643,
+        "ideal_rms": 11.45159813010684,
+        "self_rms": 11.767824586044282,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 179037,
+        "self_valid_samples": 166205,
+        "participant": "subject1"
+      },
+      {
+        "rotation": [
+          [
+            0.997380091782734,
+            0.07233397566002778,
+            -0.0008651477790351489
+          ],
+          [
+            -0.0722967765147241,
+            0.9971338698045049,
+            0.02229847067116354
+          ],
+          [
+            0.002475605187645883,
+            -0.02217750332898658,
+            0.9997509838580043
+          ]
+        ],
+        "angle_degrees": 4.340055098106703,
+        "gain": 1.0258605234502773,
+        "raw_gain": 1.0258605234502773,
+        "noise_std": 0.10760028319319964,
+        "ideal_rms": 11.43199148794421,
+        "self_rms": 11.72762877190156,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 181901,
+        "self_valid_samples": 165232,
+        "participant": "subject2"
+      },
+      {
+        "rotation": [
+          [
+            0.9865109754717734,
+            -0.08109275815469995,
+            0.14219725682513606
+          ],
+          [
+            0.06870178904128836,
+            0.9935702898334068,
+            0.08998968464711099
+          ],
+          [
+            -0.14858048141077168,
+            -0.07900660564296835,
+            0.985739213386847
+          ]
+        ],
+        "angle_degrees": 10.607818162056343,
+        "gain": 0.8810725165091219,
+        "raw_gain": 0.8810725165091219,
+        "noise_std": 0.0,
+        "ideal_rms": 13.450594514807218,
+        "self_rms": 11.850949157704987,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 86545,
+        "self_valid_samples": 166167,
+        "participant": "subject3"
+      },
+      {
+        "rotation": [
+          [
+            0.9520772395743902,
+            -0.30430480388856235,
+            0.030781751326929632
+          ],
+          [
+            0.30579241712101385,
+            0.9449620407221591,
+            -0.11635179081346593
+          ],
+          [
+            0.006318822334677336,
+            0.12018871795870133,
+            0.9927309527559552
+          ]
+        ],
+        "angle_degrees": 19.111167457687426,
+        "gain": 0.8526620761963043,
+        "raw_gain": 0.8526620761963043,
+        "noise_std": 0.0,
+        "ideal_rms": 13.79714135116978,
+        "self_rms": 11.764299190062307,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 74171,
+        "self_valid_samples": 200176,
+        "participant": "subject4"
+      },
+      {
+        "rotation": [
+          [
+            0.9312450535661119,
+            0.28057002582322915,
+            -0.23251475397961696
+          ],
+          [
+            -0.34463782425065553,
+            0.8853987108776545,
+            -0.3119196897792149
+          ],
+          [
+            0.11835294801745984,
+            0.37060704713448167,
+            0.9212182131882958
+          ]
+        ],
+        "angle_degrees": 29.665349844192775,
+        "gain": 1.0212334181199771,
+        "raw_gain": 1.0212334181199771,
+        "noise_std": 0.014787519436283453,
+        "ideal_rms": 11.477447355971371,
+        "self_rms": 11.721152794630736,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 222007,
+        "self_valid_samples": 154860,
+        "participant": "subject5"
+      },
+      {
+        "rotation": [
+          [
+            0.7414684699218095,
+            0.6308801924631705,
+            -0.22850534100857126
+          ],
+          [
+            -0.6298121859306617,
+            0.7718277305632414,
+            0.08728439028164242
+          ],
+          [
+            0.2314327517121382,
+            0.07919682500725209,
+            0.9696219594995352
+          ]
+        ],
+        "angle_degrees": 42.144144441005544,
+        "gain": 1.2067109620666554,
+        "raw_gain": 1.2067109620666554,
+        "noise_std": 0.14223629726100465,
+        "ideal_rms": 10.082443872546891,
+        "self_rms": 12.166595545424114,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 94891,
+        "self_valid_samples": 162693,
+        "participant": "subject7"
+      },
+      {
+        "rotation": [
+          [
+            0.754403825583517,
+            0.011944793402496795,
+            0.656301904503961
+          ],
+          [
+            -0.42797400235062477,
+            0.7670514208282716,
+            0.47798574363396784
+          ],
+          [
+            -0.4977078673850174,
+            -0.6414744263927452,
+            0.5837785873318382
+          ]
+        ],
+        "angle_degrees": 56.453269704270554,
+        "gain": 0.960422000583352,
+        "raw_gain": 0.960422000583352,
+        "noise_std": 0.0,
+        "ideal_rms": 13.00978068329657,
+        "self_rms": 12.494879591002341,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 149142,
+        "self_valid_samples": 204121,
+        "participant": "subject8"
+      },
+      {
+        "rotation": [
+          [
+            0.31899085719165104,
+            0.8474769753441361,
+            -0.4242966053242599
+          ],
+          [
+            -0.7235288043547315,
+            0.5069198493706777,
+            0.46854918160532794
+          ],
+          [
+            0.6121690144863172,
+            0.15752791046530307,
+            0.774876799967122
+          ]
+        ],
+        "angle_degrees": 72.51874561495586,
+        "gain": 1.0089555232198253,
+        "raw_gain": 1.0089555232198253,
+        "noise_std": 0.06314144655814004,
+        "ideal_rms": 11.304816381218249,
+        "self_rms": 11.40605692681611,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 205498,
+        "self_valid_samples": 201704,
+        "participant": "subject9"
+      },
+      {
+        "rotation": [
+          [
+            0.01315404356447622,
+            0.95167640615006,
+            -0.3068207768636444
+          ],
+          [
+            -0.8365007133440276,
+            0.17858139885823476,
+            0.5180494576358218
+          ],
+          [
+            0.5478079295819265,
+            0.24984135358091242,
+            0.7984270601175919
+          ]
+        ],
+        "angle_degrees": 90.28182467912868,
+        "gain": 1.0025481098707445,
+        "raw_gain": 1.0025481098707445,
+        "noise_std": 0.03074928326387328,
+        "ideal_rms": 11.82811685060142,
+        "self_rms": 11.858256191900756,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 208478,
+        "self_valid_samples": 211500,
+        "participant": "subject10"
+      }
+    ],
+    "right_wrist": [
+      {
+        "rotation": [
+          [
+            0.9952728235108186,
+            -0.09649662943129675,
+            -0.010973025526346037
+          ],
+          [
+            0.09670550257203905,
+            0.9951032019011521,
+            0.020436813312359105
+          ],
+          [
+            0.008947209234850685,
+            -0.021401356837216248,
+            0.9997309284864773
+          ]
+        ],
+        "angle_degrees": 5.701207293592851,
+        "gain": 1.020117916391779,
+        "raw_gain": 1.020117916391779,
+        "noise_std": 0.03685314853996463,
+        "ideal_rms": 11.498606209012541,
+        "self_rms": 11.729934207347448,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 179037,
+        "self_valid_samples": 166205,
+        "participant": "subject1"
+      },
+      {
+        "rotation": [
+          [
+            0.9728577043897435,
+            -0.16329068217561019,
+            -0.1639635329094318
+          ],
+          [
+            0.18873960409543963,
+            0.9698832858094788,
+            0.15396029927648744
+          ],
+          [
+            0.1338852077543116,
+            -0.1807278756086972,
+            0.9743778456648899
+          ]
+        ],
+        "angle_degrees": 16.552433996152914,
+        "gain": 1.0244983032650863,
+        "raw_gain": 1.0244983032650863,
+        "noise_std": 0.041624420422006314,
+        "ideal_rms": 11.53396574942942,
+        "self_rms": 11.816528340208059,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 181901,
+        "self_valid_samples": 165232,
+        "participant": "subject2"
+      },
+      {
+        "rotation": [
+          [
+            0.9163913468401446,
+            -0.2503999873868451,
+            -0.3122927244640413
+          ],
+          [
+            0.31700743608043613,
+            0.9303520420876038,
+            0.1842589570499457
+          ],
+          [
+            0.2444037334130026,
+            -0.2678524297072799,
+            0.9319452188802154
+          ]
+        ],
+        "angle_degrees": 27.209032284523854,
+        "gain": 0.8935200552331273,
+        "raw_gain": 0.8935200552331273,
+        "noise_std": 0.0,
+        "ideal_rms": 13.123682316995344,
+        "self_rms": 11.726273348743696,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 86545,
+        "self_valid_samples": 166167,
+        "participant": "subject3"
+      },
+      {
+        "rotation": [
+          [
+            0.794045906572998,
+            -0.4301065088722311,
+            -0.4295340373944853
+          ],
+          [
+            0.4676462161116338,
+            0.8836812571981183,
+            -0.02035809994140554
+          ],
+          [
+            0.3883273294672122,
+            -0.18470470135460698,
+            0.9028211663925302
+          ]
+        ],
+        "angle_degrees": 37.78885997003511,
+        "gain": 0.8602865052915569,
+        "raw_gain": 0.8602865052915569,
+        "noise_std": 0.0,
+        "ideal_rms": 13.821976806234836,
+        "self_rms": 11.890860122856722,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 74171,
+        "self_valid_samples": 200176,
+        "participant": "subject4"
+      },
+      {
+        "rotation": [
+          [
+            0.6972224916610651,
+            -0.7147268081235121,
+            0.05519408366403415
+          ],
+          [
+            0.7024391133581303,
+            0.6658102426959492,
+            -0.2515472376032085
+          ],
+          [
+            0.14303876798469678,
+            0.2141548749637456,
+            0.9662699417774945
+          ]
+        ],
+        "angle_degrees": 48.34441744023814,
+        "gain": 1.01889685794187,
+        "raw_gain": 1.01889685794187,
+        "noise_std": 0.02448879702677979,
+        "ideal_rms": 11.204968255073492,
+        "self_rms": 11.416706948432779,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 222007,
+        "self_valid_samples": 154860,
+        "participant": "subject5"
+      },
+      {
+        "rotation": [
+          [
+            0.523704907847299,
+            -0.7251174300824899,
+            -0.44714414016871307
+          ],
+          [
+            0.6559934142715789,
+            0.6781284570901733,
+            -0.3313826128764421
+          ],
+          [
+            0.5435124744925078,
+            -0.11977691044214915,
+            0.8308114598366855
+          ]
+        ],
+        "angle_degrees": 58.914112099779175,
+        "gain": 1.2174095179337436,
+        "raw_gain": 1.2174095179337436,
+        "noise_std": 0.1530550351936177,
+        "ideal_rms": 10.084325981780925,
+        "self_rms": 12.27675443216664,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 94891,
+        "self_valid_samples": 162693,
+        "participant": "subject7"
+      },
+      {
+        "rotation": [
+          [
+            0.6150284713219771,
+            0.1308581049561863,
+            0.7775706629179291
+          ],
+          [
+            0.48849307221317184,
+            0.7108637226748742,
+            -0.5060111522333837
+          ],
+          [
+            -0.6189624365525657,
+            0.6910491474215821,
+            0.37327815096093664
+          ]
+        ],
+        "angle_degrees": 69.53805548427314,
+        "gain": 0.9677835264769932,
+        "raw_gain": 0.9677835264769932,
+        "noise_std": 0.0,
+        "ideal_rms": 13.132848501327345,
+        "self_rms": 12.709754435302672,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 149142,
+        "self_valid_samples": 204121,
+        "participant": "subject8"
+      },
+      {
+        "rotation": [
+          [
+            0.3373810233347177,
+            -0.9380379147677704,
+            -0.07911330830999391
+          ],
+          [
+            0.6492105665705525,
+            0.29270813007130864,
+            -0.7020310469226418
+          ],
+          [
+            0.6816888478967229,
+            0.18549075731230208,
+            0.7077382945728935
+          ]
+        ],
+        "angle_degrees": 80.27533331197365,
+        "gain": 0.9758568416552086,
+        "raw_gain": 0.9758568416552086,
+        "noise_std": 0.09072459299124072,
+        "ideal_rms": 11.726026090478811,
+        "self_rms": 11.442922785821226,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 205498,
+        "self_valid_samples": 201704,
+        "participant": "subject9"
+      },
+      {
+        "rotation": [
+          [
+            -0.017312703284065794,
+            -0.909450967354623,
+            -0.4154506087162928
+          ],
+          [
+            0.8428854357663483,
+            0.21022708612479893,
+            -0.4953268763477805
+          ],
+          [
+            0.537814477750433,
+            -0.3587527146060594,
+            0.762923375762476
+          ]
+        ],
+        "angle_degrees": 91.26525785534898,
+        "gain": 0.9947191521407485,
+        "raw_gain": 0.9947191521407485,
+        "noise_std": 0.0,
+        "ideal_rms": 11.941950892220317,
+        "self_rms": 11.878887266415848,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 208478,
+        "self_valid_samples": 211500,
+        "participant": "subject10"
+      }
+    ],
+    "left_ankle": [
+      {
+        "rotation": [
+          [
+            0.999962267791783,
+            0.007900715197753571,
+            0.0036113282983670637
+          ],
+          [
+            -0.007897713835947442,
+            0.9999684558834082,
+            -0.0008446030534110485
+          ],
+          [
+            -0.0036178873503863187,
+            0.0008160499472046301,
+            0.9999931224531514
+          ]
+        ],
+        "angle_degrees": 0.5,
+        "gain": 1.024849927624431,
+        "raw_gain": 1.024849927624431,
+        "noise_std": 0.062380777831124806,
+        "ideal_rms": 11.287614286577394,
+        "self_rms": 11.568110684651336,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 179037,
+        "self_valid_samples": 166205,
+        "participant": "subject1"
+      },
+      {
+        "rotation": [
+          [
+            0.9999539604451729,
+            0.005197845754444416,
+            0.008065940089439162
+          ],
+          [
+            -0.005195758483748687,
+            0.9999864628366656,
+            -0.00027970912148191334
+          ],
+          [
+            -0.0080672847843603,
+            0.00023778756714934395,
+            0.9999674306562594
+          ]
+        ],
+        "angle_degrees": 0.55,
+        "gain": 1.008199044868859,
+        "raw_gain": 1.008199044868859,
+        "noise_std": 0.09772982445202905,
+        "ideal_rms": 11.57450185185071,
+        "self_rms": 11.669401711868725,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 181901,
+        "self_valid_samples": 165232,
+        "participant": "subject2"
+      },
+      {
+        "rotation": [
+          [
+            0.9999453185511032,
+            -0.0015641797568513955,
+            0.01033988633500541
+          ],
+          [
+            0.0015585314528087043,
+            0.9999986318653286,
+            0.000554298819777328
+          ],
+          [
+            -0.010340739211641558,
+            -0.0005381534718431713,
+            0.9999463883145924
+          ]
+        ],
+        "angle_degrees": 0.6000000000000001,
+        "gain": 0.9364071094925678,
+        "raw_gain": 0.9364071094925678,
+        "noise_std": 0.06995017274163996,
+        "ideal_rms": 12.744771701984533,
+        "self_rms": 11.93429483059801,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 86545,
+        "self_valid_samples": 166167,
+        "participant": "subject3"
+      },
+      {
+        "rotation": [
+          [
+            0.9999362334786474,
+            -0.008540278191699335,
+            -0.007388682219755976
+          ],
+          [
+            0.008548253239540612,
+            0.9999629133687807,
+            0.0010484529427517676
+          ],
+          [
+            0.007379454118621297,
+            -0.001111546413275717,
+            0.9999721536730322
+          ]
+        ],
+        "angle_degrees": 0.6500000000000001,
+        "gain": 0.9207755986420274,
+        "raw_gain": 0.9207755986420274,
+        "noise_std": 0.0,
+        "ideal_rms": 11.933020922921534,
+        "self_rms": 10.987634483910913,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 74171,
+        "self_valid_samples": 200176,
+        "participant": "subject4"
+      },
+      {
+        "rotation": [
+          [
+            0.9981387314007193,
+            0.02286280761978751,
+            0.056536403365471485
+          ],
+          [
+            -0.022965520079563293,
+            0.9997355758174489,
+            0.0011676182719742292
+          ],
+          [
+            -0.05649475874130169,
+            -0.0024638329274647023,
+            0.9983998556500635
+          ]
+        ],
+        "angle_degrees": 3.497856673040837,
+        "gain": 1.041423955645175,
+        "raw_gain": 1.041423955645175,
+        "noise_std": 0.1317530271398704,
+        "ideal_rms": 11.162094380387117,
+        "self_rms": 11.62447248290753,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 222007,
+        "self_valid_samples": 154860,
+        "participant": "subject5"
+      },
+      {
+        "rotation": [
+          [
+            0.9309884091080891,
+            0.039117868834187434,
+            0.36294679285573045
+          ],
+          [
+            -0.030559948922137627,
+            0.9991035994438319,
+            -0.02929312377086933
+          ],
+          [
+            -0.36376733172216763,
+            0.01617992324612319,
+            0.9313493106538943
+          ]
+        ],
+        "angle_degrees": 21.452567306813613,
+        "gain": 1.1263145912789114,
+        "raw_gain": 1.1263145912789114,
+        "noise_std": 0.12005347430311944,
+        "ideal_rms": 10.322967577145565,
+        "self_rms": 11.626909007438162,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 94891,
+        "self_valid_samples": 162693,
+        "participant": "subject7"
+      },
+      {
+        "rotation": [
+          [
+            0.20856795623196275,
+            0.5554176838444002,
+            -0.8049910584013615
+          ],
+          [
+            -0.5395146667903051,
+            0.7518644387583875,
+            0.3789772948986275
+          ],
+          [
+            0.8157348416926717,
+            0.35526196278726097,
+            0.4564708159840831
+          ]
+        ],
+        "angle_degrees": 77.96837220849667,
+        "gain": 0.9445317896365139,
+        "raw_gain": 0.9445317896365139,
+        "noise_std": 0.0,
+        "ideal_rms": 11.358331655181333,
+        "self_rms": 10.72830532555349,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 149142,
+        "self_valid_samples": 204121,
+        "participant": "subject8"
+      },
+      {
+        "rotation": [
+          [
+            -0.864253058858603,
+            0.10443025369503434,
+            0.49209853928531305
+          ],
+          [
+            -0.2519274649008367,
+            0.7568635259695362,
+            -0.6030672893513618
+          ],
+          [
+            -0.4354299055900797,
+            -0.6451758870030344,
+            -0.6278127683853381
+          ]
+        ],
+        "angle_degrees": 150.18106311719717,
+        "gain": 1.0163414532475301,
+        "raw_gain": 1.0163414532475301,
+        "noise_std": 0.04844823529857189,
+        "ideal_rms": 10.834777215752087,
+        "self_rms": 11.011833221070704,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 205498,
+        "self_valid_samples": 201704,
+        "participant": "subject9"
+      },
+      {
+        "rotation": [
+          [
+            -0.9822964269904627,
+            0.1562595326697488,
+            0.10332805994308684
+          ],
+          [
+            0.1643962024789582,
+            0.9834980382195946,
+            0.07553474318952423
+          ],
+          [
+            -0.08981992057593798,
+            0.09118424901287349,
+            -0.9917750826672802
+          ]
+        ],
+        "angle_degrees": 174.43494766879056,
+        "gain": 1.019880494160301,
+        "raw_gain": 1.019880494160301,
+        "noise_std": 0.015501996991728677,
+        "ideal_rms": 11.331521251843386,
+        "self_rms": 11.556797493917985,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 208478,
+        "self_valid_samples": 211500,
+        "participant": "subject10"
+      }
+    ],
+    "right_ankle": [
+      {
+        "rotation": [
+          [
+            0.9999619354840321,
+            -0.001869123317071818,
+            -0.008522556016476675
+          ],
+          [
+            0.0018677800732118293,
+            0.9999982419910373,
+            -0.00016556700432811565
+          ],
+          [
+            0.008522850498895139,
+            0.00014964244179983767,
+            0.9999636686532732
+          ]
+        ],
+        "angle_degrees": 0.5,
+        "gain": 1.0104074776431513,
+        "raw_gain": 1.0104074776431513,
+        "noise_std": 0.11111372273813838,
+        "ideal_rms": 11.569126846743613,
+        "self_rms": 11.689532275751878,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 179037,
+        "self_valid_samples": 166205,
+        "participant": "subject1"
+      },
+      {
+        "rotation": [
+          [
+            0.9999567546532934,
+            -0.00865942371738311,
+            0.0033916373827500806
+          ],
+          [
+            0.008651333490046254,
+            0.9999597136634519,
+            0.0023927973067484586
+          ],
+          [
+            -0.0034122209918539897,
+            -0.002363351643323835,
+            0.9999913856213526
+          ]
+        ],
+        "angle_degrees": 0.55,
+        "gain": 1.000200878458927,
+        "raw_gain": 1.000200878458927,
+        "noise_std": 0.13752851308843717,
+        "ideal_rms": 11.434032508455102,
+        "self_rms": 11.43632935928472,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 181901,
+        "self_valid_samples": 165232,
+        "participant": "subject2"
+      },
+      {
+        "rotation": [
+          [
+            0.9999451843365795,
+            -0.007623018304112058,
+            -0.007177598067535203
+          ],
+          [
+            0.00762426020391222,
+            0.9999709242944856,
+            0.00014567764097376837
+          ],
+          [
+            0.0071762788704838485,
+            -0.00020039353086320763,
+            0.999974230099959
+          ]
+        ],
+        "angle_degrees": 0.6000000000000001,
+        "gain": 0.9543056130560007,
+        "raw_gain": 0.9543056130560007,
+        "noise_std": 0.0,
+        "ideal_rms": 12.658285832622994,
+        "self_rms": 12.079873221739375,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 86545,
+        "self_valid_samples": 166167,
+        "participant": "subject3"
+      },
+      {
+        "rotation": [
+          [
+            0.9996882032701836,
+            -0.022986275167197763,
+            0.009753327451180202
+          ],
+          [
+            0.02297152969785648,
+            0.9997348051061233,
+            0.0016211979404486048
+          ],
+          [
+            -0.009788006220501485,
+            -0.0013966436050347063,
+            0.999951120965854
+          ]
+        ],
+        "angle_degrees": 1.4334292235426545,
+        "gain": 0.9135062015970512,
+        "raw_gain": 0.9135062015970512,
+        "noise_std": 0.0,
+        "ideal_rms": 11.928662065269805,
+        "self_rms": 10.896906773379456,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 74171,
+        "self_valid_samples": 200176,
+        "participant": "subject4"
+      },
+      {
+        "rotation": [
+          [
+            0.9952082565572821,
+            -0.09577011100252394,
+            0.01971324221885544
+          ],
+          [
+            0.09573491748342572,
+            0.9954031385301895,
+            0.002723486495298712
+          ],
+          [
+            -0.019883451779223175,
+            -0.0008231906295906094,
+            0.9998019657424817
+          ]
+        ],
+        "angle_degrees": 5.6121523458491085,
+        "gain": 1.0326470757661872,
+        "raw_gain": 1.0326470757661872,
+        "noise_std": 0.1346450419765075,
+        "ideal_rms": 11.194932480620798,
+        "self_rms": 11.560414289512975,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 222007,
+        "self_valid_samples": 154860,
+        "participant": "subject5"
+      },
+      {
+        "rotation": [
+          [
+            0.9589340911121965,
+            -0.1838453579227731,
+            0.21597752955590754
+          ],
+          [
+            0.18016784684354173,
+            0.9829483928697976,
+            0.036769605905477704
+          ],
+          [
+            -0.2190546869313404,
+            0.0036525778471523627,
+            0.97570574601592
+          ]
+        ],
+        "angle_degrees": 16.50516763254109,
+        "gain": 1.1309008367537672,
+        "raw_gain": 1.1309008367537672,
+        "noise_std": 0.12662713667974237,
+        "ideal_rms": 10.32250753556508,
+        "self_rms": 11.673732409367616,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 94891,
+        "self_valid_samples": 162693,
+        "participant": "subject7"
+      },
+      {
+        "rotation": [
+          [
+            0.7715847440059949,
+            0.014012000002309571,
+            -0.635972205896719
+          ],
+          [
+            -0.04425744490357131,
+            0.9985172531809687,
+            -0.0316950101836323
+          ],
+          [
+            0.634585109648667,
+            0.05260189118148208,
+            0.771060814499298
+          ]
+        ],
+        "angle_degrees": 39.593872667808775,
+        "gain": 0.9725325609839193,
+        "raw_gain": 0.9725325609839193,
+        "noise_std": 0.0,
+        "ideal_rms": 11.36657056934473,
+        "self_rms": 11.054359985409276,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 149142,
+        "self_valid_samples": 204121,
+        "participant": "subject8"
+      },
+      {
+        "rotation": [
+          [
+            0.17681338386977755,
+            -0.523350960774888,
+            0.8335711122276972
+          ],
+          [
+            0.41110087488559155,
+            0.8087702555702958,
+            0.4205790584100205
+          ],
+          [
+            -0.8942779757730923,
+            0.2683178070139215,
+            0.35815144350738015
+          ]
+        ],
+        "angle_degrees": 80.10358035441658,
+        "gain": 1.0148550321907828,
+        "raw_gain": 1.0148550321907828,
+        "noise_std": 0.05350964822392165,
+        "ideal_rms": 10.866353595177806,
+        "self_rms": 11.0277736276306,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 205498,
+        "self_valid_samples": 201704,
+        "participant": "subject9"
+      },
+      {
+        "rotation": [
+          [
+            -0.7084273354465714,
+            -0.3590780859813468,
+            0.6076130664823163
+          ],
+          [
+            0.4526719810603523,
+            0.42934414385051334,
+            0.7815060356159549
+          ],
+          [
+            -0.5414968032730823,
+            0.8286896489695299,
+            -0.1416145392810727
+          ]
+        ],
+        "angle_degrees": 135.2633070710256,
+        "gain": 1.000818788572573,
+        "raw_gain": 1.000818788572573,
+        "noise_std": 0.05442820167947956,
+        "ideal_rms": 11.403223503537868,
+        "self_rms": 11.412560332633062,
+        "ideal_zero_fraction": 0.0,
+        "self_zero_fraction": 0.0,
+        "ideal_valid_samples": 208478,
+        "self_valid_samples": 211500,
+        "participant": "subject10"
+      }
+    ]
+  },
+  "excluded": [
+    {
+      "participant": "subject6",
+      "limb": "left_wrist",
+      "reason": "Sensor is effectively zero-filled: ideal=0.000, self=1.000"
+    },
+    {
+      "participant": "subject6",
+      "limb": "right_wrist",
+      "reason": "Sensor is effectively zero-filled: ideal=0.000, self=1.000"
+    },
+    {
+      "participant": "subject6",
+      "limb": "left_ankle",
+      "reason": "Sensor is effectively zero-filled: ideal=0.000, self=1.000"
+    },
+    {
+      "participant": "subject6",
+      "limb": "right_ankle",
+      "reason": "Sensor is effectively zero-filled: ideal=0.000, self=1.000"
+    }
+  ]
+}

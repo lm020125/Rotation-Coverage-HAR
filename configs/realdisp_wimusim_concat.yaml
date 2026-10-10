@@ -1,0 +1,50 @@
+seed: 256
+data:
+  manifest: /root/autodl-tmp/realdisp_project/data/realdisp_wimusim/manifest_ideal.csv
+  limb_mode: bilateral
+  num_classes: 33
+  imu_channels: 6
+  sample_rate: 25
+  normalization: train_global
+  missing_strategy: interpolate
+  use_audio: false
+model:
+  architecture: rcbd_har
+  variant: concat
+  hidden_dim: 128
+  encoder_blocks: 3
+  dropout: 0.2
+  temporal: tcn
+  role_vector: false
+training:
+  epochs: 100
+  batch_size: 256
+  gradient_accumulation_steps: 1
+  optimizer: adam
+  learning_rate: 0.001
+  scheduler: exponential
+  learning_rate_decay: 0.9
+  warmup_epochs: 0
+  weight_decay: 0.0
+  patience: 100
+  num_workers: 8
+  class_weighting: false
+  swap_augmentation_probability: 0.0
+  orientation_augmentation_probability: 0.0
+  max_nonfinite_batches: 3
+loss:
+  swap_consistency: 0.0
+  role_smoothness: 0.0
+  role_utilization: 0.0
+  minimum_role_utilization: 0.0
+  orientation_entropy: 0.0
+  orientation_information: 0.0
+  orientation_equivariance: 0.0
+  orientation_canonical_consistency: 0.0
+  orientation_prediction_consistency: 0.0
+  orientation_embedding_consistency: 0.0
+evaluation:
+  enabled: false
+cross_validation:
+  seeds: [256]
+  refit_full_train: false

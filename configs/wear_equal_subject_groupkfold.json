@@ -1,0 +1,7 @@
+{
+  "test_folds": [
+    ["sbj_3", "sbj_6", "sbj_9", "sbj_10", "sbj_13", "sbj_16"],
+    ["sbj_4", "sbj_7", "sbj_8", "sbj_11", "sbj_14", "sbj_17"],
+    ["sbj_0", "sbj_1", "sbj_2", "sbj_5", "sbj_12", "sbj_15"]
+  ]
+}
